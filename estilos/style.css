@@ -6,6 +6,11 @@
     Lilás: #5f2c82
 */
 
+:root {
+    --verde: #49a09d;
+    --lilas: #5f2c82;
+}
+
 * {
     font-family: arial;
     padding: 0px;
@@ -14,7 +19,7 @@
 }
 
 body, html {
-    background-image: linear-gradient(to left, #5f2c82, #49a09d);
+    background-color: var(--lilas);
     height: 100vh;
     width: 100vw;
 
@@ -34,8 +39,8 @@ section#login {
     overflow: hidden;
 
     background-color: white;
-    width: 250px;
-    height: 500px;
+    width: 300px;
+    height: 550px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.534);
 
@@ -44,7 +49,7 @@ section#login {
 }
 
 section#login > div#imagem {
-    background: #5f2c82 url(../imagens/pexels-vedanti-66315-239975\ \(1\).jpg) no-repeat;
+    background: var(--lilas) url(../imagens/pexels-vedanti-66315-239975\ \(1\).jpg) no-repeat;
     background-size: cover;
     background-position: bottom right;
     height: 200px;
@@ -53,4 +58,62 @@ section#login > div#imagem {
 section#login > div#formulario {
     display: block;
     padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;    
+}
+
+div#formulario > p {
+    font-size: 0.8em;
+
+}
+
+form > div.campo {
+    padding-left: 10px;
+    background-color: var(--lilas);
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+form label {
+    display: none;
+}
+
+form > input[type=submit] {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #204948;
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    color: #204948;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid var(--verde);
+}
+
+form > a.botao:hover {
+    background-color: #9ffffd;
 }
